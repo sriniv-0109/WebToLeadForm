@@ -13,7 +13,7 @@
     <form 
      action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
      method="POST" 
-     onsubmit= "handleSubmit()" >
+     onsubmit= "handleSubmit(event)" >
 
      <input type=hidden name='captcha_settings' 
     value='{"keyname":"webToLeadAnkit","fallback":"true","orgId":"00DdM00000KxOyr","ts":""}'>
@@ -53,7 +53,7 @@
         <input  id="00NdM00000Hx6dt" name="00NdM00000Hx6dt" size="12" type="text" /></span><br> 
     -->
     <div class="g-recaptcha" 
-     data-callback="capchtacallback"
+     data-callback="capchtacallback()"
     data-sitekey="6LcKFOoqAAAAAAewk9JUcLaAGE0ZXPS00Gu0DD8V">
    </div><br>
     <input class="submit" type="submit" name="submit"/>

@@ -29,6 +29,6 @@ document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
 }
 } setInterval(timestamp, 500);
 
-function capchtacallback(event){
+function capchtacallback(){
 capchaChecked=true;
 }

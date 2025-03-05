@@ -1,5 +1,8 @@
 function handleSubmit(){
-let outputDate=document.querySelector(".outputDate");
+let capchaChecked=false;
+if(capchaChecked){
+
+    let outputDate=document.querySelector(".outputDate");
 let inputDate=document.querySelector(".inputDate");
 console.log('inputDate',inputDate.value);//type of this date is String
 
@@ -8,12 +11,22 @@ console.log('inputDate',inputDate.value);//type of this date is String
 let formattedDate=new Date(inputDate.value).toLocaleDateString("en-IN");
 outputDate.value=formattedDate;
 console.log("outputDate.value",outputDate.value);
+
+}
+else{
+    alert("Please check the capcha check box");
+}
+
 }
 function timestamp() { 
 var response = document.getElementById("g-recaptcha-response");
- if (response == null || response.value.trim() == "") {
-             var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-    elems["ts"] = JSON.stringify(new Date().getTime());
-    document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
+if (response == null || response.value.trim() == "") {
+            var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+elems["ts"] = JSON.stringify(new Date().getTime());
+document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
 }
- } setInterval(timestamp, 500);
+} setInterval(timestamp, 500);
+
+function capchtacallback(){
+capchaChecked=true;
+}

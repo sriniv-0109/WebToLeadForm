@@ -1,5 +1,5 @@
-function handleSubmit(){
 let capchaChecked=false;
+function handleSubmit(event){
 if(capchaChecked){
 
     let outputDate=document.querySelector(".outputDate");
@@ -14,7 +14,9 @@ console.log("outputDate.value",outputDate.value);
 
 }
 else{
-    alert("Please check the capcha check box");
+    alert("Please check the capchta check box");
+    event.preventDefault();
+    
 }
 
 }
@@ -27,6 +29,6 @@ document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
 }
 } setInterval(timestamp, 500);
 
-function capchtacallback(){
+function capchtacallback(event){
 capchaChecked=true;
 }

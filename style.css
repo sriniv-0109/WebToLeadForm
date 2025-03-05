@@ -12,7 +12,7 @@ input{
     margin:15px auto 0 auto;
     width:70px;
     background-color: rgb(198, 185, 211);
-    border-radius: 5px;
+    border-radius: 6px;
 }
 form{
     min-width: 300px;

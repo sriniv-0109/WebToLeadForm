@@ -1,7 +1,7 @@
 let capchaChecked=false;
 function handleSubmit(event){
 if(capchaChecked){
-
+debugger;
     let outputDate=document.querySelector(".outputDate");
 let inputDate=document.querySelector(".inputDate");
 console.log('inputDate',inputDate.value);//type of this date is String
@@ -15,6 +15,7 @@ console.log("outputDate.value",outputDate.value);
 }
 else{
     alert("Please check the capchta check box");
+    debugger;
     event.preventDefault();
     
 }
@@ -30,5 +31,5 @@ document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
 } setInterval(timestamp, 500);
 
 function capchtacallback(){
-capchaChecked=true;
+    capchaChecked=true;
 }
